@@ -1,11 +1,9 @@
-import Navbar from "./navbar/Navbar";
 import View from "./imgView/View";
 import ViewOpts from "./viewOpts/ViewOpts";
 
 const Home = () => {
   return (
-    <div className="h-[100vh] bg-black/90">
-      <Navbar />
+    <div className="h-[100vh] overflow-hidden">
       <View />
       <ViewOpts />
     </div>

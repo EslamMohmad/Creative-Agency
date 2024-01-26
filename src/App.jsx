@@ -1,15 +1,23 @@
 import React from "react";
-import Home from "./componets/home/home";
-import Cursor from "./componets/cursor/Cursor";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AppContextProvider } from "./context/AppContext";
+
+import Home from "./componets/home/home";
+import Parent from "./componets/parent/Parent";
+import About from "./componets/about/About";
+
 function App() {
   return (
-    <div className="relative overflow-hidden">
-      <AppContextProvider>
-        <Cursor />
-        <Home />
-      </AppContextProvider>
-    </div>
+    <AppContextProvider>
+      <Router>
+        <Routes>
+          <Route path="Creative-Agency" element={<Parent />}>
+            <Route path="" element={<Home />} />
+            <Route path="about" element={<About />} />
+          </Route>
+        </Routes>
+      </Router>
+    </AppContextProvider>
   );
 }
 

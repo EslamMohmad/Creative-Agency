@@ -12,3 +12,18 @@
 body {
   cursor: none;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0c0f16;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555;
+}

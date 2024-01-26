@@ -1,17 +1,11 @@
-import { useContext } from "react";
-import { AppContext } from "../../../context/AppContext";
 import logo from "../assets/Home/logo.png";
+import HoverCursor from "../../../reuseable components/HoverCursor";
 
 const Logo = () => {
-  const { setCursorState } = useContext(AppContext);
-
   return (
-    <img
-      onMouseEnter={() => setCursorState(true)}
-      onMouseLeave={() => setCursorState(false)}
-      src={logo}
-      className="h-[16px]"
-    />
+    <HoverCursor>
+      <img src={logo} className="h-[16px]" />
+    </HoverCursor>
   );
 };
 
