@@ -19,9 +19,9 @@ export const lettersTransition = (
   function effect(param) {
     const TYPE =
       param === "words"
-        ? current.textContent.split(/\s/)
+        ? current.textContent.split("")
         : [...current.textContent];
-    return (current.innerHTML = TYPE.map((letter, i, arr) => {
+    const result = TYPE.map((letter, i, arr) => {
       if (i === 0 || arr[i - 1] === " ") {
         return `<span style="${rootStyles(
           i
@@ -30,7 +30,8 @@ export const lettersTransition = (
         return `<span style="${rootStyles(
           i
         )}" class="first:capitalize animate-letterTransition">${letter.toLowerCase()}</span>`;
-    }).join(param === "words" ? " " : ""));
+    });
+    return (current.innerHTML = result.join(""));
   }
 
   effect(type);

@@ -15,6 +15,9 @@ import "swiper/css/navigation";
 const OurTeam = () => {
   const slideBreakpoints = {
     0: {
+      slidesPerView: 1,
+    },
+    490: {
       slidesPerView: 2,
     },
     768: {
@@ -33,18 +36,22 @@ const OurTeam = () => {
           <p className="tracking-[15px] uppercase text-md text-lightGreenColor">
             employees
           </p>
-          <h1 className="4xl uppercase text-6xl font-bold my-7">our team.</h1>
-          <div className="flex gap-3">
-            <HoverCursor>
-              <button className="w-[60px] h-[60px] text-center border border-white rounded-full prevSlide">
-                <FontAwesomeIcon icon={faChevronLeft} />{" "}
-              </button>
-            </HoverCursor>
-            <HoverCursor>
-              <button className="w-[60px] h-[60px] text-center border border-white rounded-full nextSlide">
-                <FontAwesomeIcon icon={faChevronRight} />{" "}
-              </button>
-            </HoverCursor>
+          <div className="flex gap-2 flex-row lg:flex-col items-center flex-wrap lg:items-start justify-between">
+            <h1 className="uppercase text-4xl sm:text-6xl font-bold my-7">
+              our team.
+            </h1>
+            <div className="flex gap-3">
+              <HoverCursor>
+                <button className="w-[60px] h-[60px] text-center border border-white rounded-full prevSlide">
+                  <FontAwesomeIcon icon={faChevronLeft} />{" "}
+                </button>
+              </HoverCursor>
+              <HoverCursor>
+                <button className="w-[60px] h-[60px] text-center border border-white rounded-full nextSlide">
+                  <FontAwesomeIcon icon={faChevronRight} />{" "}
+                </button>
+              </HoverCursor>
+            </div>
           </div>
         </div>
         <div className="lg:col-start-4 xl:col-start-3 lg:col-end-8 mt-16 lg:mt-0">
@@ -63,12 +70,12 @@ const OurTeam = () => {
           >
             {teams.slider.map(({ img, name, jop }) => (
               <SwiperSlide key={name} className="group">
-                <div className="h-[350px] relative">
+                <div className="h-[400px] lg:h-[300px] relative">
                   <img src={img} className="w-full h-full object-cover" />
                 </div>
                 <div className="relative overflow-hidden bg-lightMainColor">
                   <div className="p-4 text-center transition-opacity duration-300 group-hover:opacity-0 opacity-100 group-hover:delay-0 delay-200">
-                    <h4 className="font-bold text-xl">{name}</h4>
+                    <h4 className="font-bold text-lg mb-1">{name}</h4>
                     <p className="text-zinc-500 text-sm">{jop}</p>
                   </div>
                   <div className="absolute -bottom-full left-0 w-full h-full opacity-0 group-hover:opacity-100 group-hover:-bottom-0 transition-all duration-300 group-hover:delay-150">

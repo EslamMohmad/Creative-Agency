@@ -43,7 +43,7 @@ const Cursor = () => {
           transform: `translate(${dims.left}px, ${dims.top}px)`,
           transition: "0.04s linear transform",
         }}
-        className={`absolute w-[38px] h-[38px] rounded-full border border-lightGreenColor -m-[16.5px] pointer-events-none z-[60]  ${
+        className={`hidden lg:block absolute w-[38px] h-[38px] rounded-full border border-lightGreenColor -m-[16.5px] pointer-events-none z-[70]  ${
           cursorStyleHandler().outerCursor
         }`}
       ></div>
@@ -54,7 +54,7 @@ const Cursor = () => {
           transitionTimingFunction: "ease-out",
           transitionProperty: "width, height, margin, opacity",
         }}
-        className={`absolute bg-lightGreenColor w-[5px] h-[5px] rounded-full  pointer-events-none z-[70] ${
+        className={`hidden lg:block absolute bg-lightGreenColor w-[5px] h-[5px] rounded-full  pointer-events-none z-[70] ${
           cursorStyleHandler().innerCursor
         }`}
       ></div>

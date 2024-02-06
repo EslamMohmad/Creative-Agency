@@ -47,7 +47,7 @@ const View = () => {
             </h1>
           </div>
           <img
-            data-swiper-parallax="1440"
+            data-swiper-parallax="50%"
             className="h-[100vh] w-[100vw] object-cover"
             src={img}
           />

@@ -1,14 +1,13 @@
-import { useContext, useRef } from "react";
+import { useContext } from "react";
 import HoverTransitionTxt from "../../../reuseable components/HoverTransitionTxt";
 import { AppContext } from "../../../context/AppContext";
+import HoverCursor from "../../../reuseable components/HoverCursor";
 
 const Menu = () => {
   const { menuCompState, setMenuCompState } = useContext(AppContext);
 
-  const textRef = useRef();
-
   return (
-    <HoverTransitionTxt elementRef={textRef}>
+    <HoverCursor>
       <div
         className="flex items-center text-white"
         onClick={() => setMenuCompState(!menuCompState)}
@@ -17,14 +16,11 @@ const Menu = () => {
           <div className="bg-white w-5 h-[3px]"></div>
           <div className="bg-white w-5 h-[3px]"></div>
         </div>
-        <h3
-          className="pl-3 py-3 font-medium text-sm flex overflow-hidden"
-          ref={textRef}
-        >
+        <HoverTransitionTxt className="pl-3 py-3 font-medium text-sm flex overflow-hidden">
           {menuCompState ? "Close" : "Menu"}
-        </h3>
+        </HoverTransitionTxt>
       </div>
-    </HoverTransitionTxt>
+    </HoverCursor>
   );
 };
 

@@ -8,6 +8,9 @@ import { useLocation } from "react-router-dom";
 import ScrollTop from "../scrollTop/ScrollTop";
 import Clients from "./Clients";
 import OurTeam from "./OurTeam";
+import AboutUs from "./AboutUs";
+import OurClients from "./OurClients";
+import Footer from "./Footer";
 
 const About = () => {
   const imgRef = useRef();
@@ -53,6 +56,9 @@ const About = () => {
         <Services />
         <Clients />
         <OurTeam />
+        <AboutUs />
+        <OurClients />
+        <Footer />
       </main>
       <ScrollTop />
     </div>

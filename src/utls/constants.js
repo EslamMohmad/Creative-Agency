@@ -18,6 +18,20 @@ import team3 from "../componets/about/assets/team3.jpg";
 import team4 from "../componets/about/assets/team4.jpg";
 import team5 from "../componets/about/assets/team5.jpg";
 import team6 from "../componets/about/assets/team6.jpg";
+
+import brand1 from "../componets/about/assets/brand1.png";
+import brand2 from "../componets/about/assets/brand2.png";
+import brand3 from "../componets/about/assets/brand3.png";
+import brand4 from "../componets/about/assets/brand4.png";
+import brand5 from "../componets/about/assets/brand5.png";
+import brand6 from "../componets/about/assets/brand6.png";
+import brand7 from "../componets/about/assets/brand7.png";
+import brand8 from "../componets/about/assets/brand8.png";
+
+import post1 from "../componets/about/assets/post1.jpg";
+import post2 from "../componets/about/assets/post2.jpg";
+import post3 from "../componets/about/assets/post3.jpg";
+
 import {
   faBehance,
   faLinkedinIn,
@@ -88,3 +102,16 @@ export const teams = {
   ],
   icons: [faFacebookF, faXTwitter, faBehance, faLinkedinIn],
 };
+
+export const brands = [
+  brand1,
+  brand2,
+  brand3,
+  brand4,
+  brand5,
+  brand6,
+  brand7,
+  brand8,
+];
+
+export const instagramPosts = [post1, post2, post3];

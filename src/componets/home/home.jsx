@@ -3,7 +3,7 @@ import ViewOpts from "./viewOpts/ViewOpts";
 
 const Home = () => {
   return (
-    <div className="h-[100vh] overflow-hidden">
+    <div className="h-[100dvh] overflow-hidden">
       <View />
       <ViewOpts />
     </div>

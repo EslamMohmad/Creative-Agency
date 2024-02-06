@@ -6,9 +6,11 @@ import "swiper/css/pagination";
 
 const ClientSliders = () => {
   return (
-    <div className="lg:max-w-[480px] h-[fit-content] lg:ml-auto bg-lightGreenColor text-black px-10 py-20">
+    <div className="lg:max-w-[480px] h-[fit-content] lg:ml-auto bg-lightGreenColor text-black px-10 py-10 sm:px-10 sm:py-20">
       <p className="uppercase tracking-[3px] text-xs">our happy clients</p>
-      <h3 className="mt-3 mb-12 text-3xl font-bold">what client's say?</h3>
+      <h3 className="mt-3 mb-6 sm:mb-12 text-3xl font-bold">
+        what client's say?
+      </h3>
       <Swiper
         spaceBetween={10}
         slidesPerView={1}
@@ -24,7 +26,7 @@ const ClientSliders = () => {
             key={name + i}
             className="cursor-grab active:cursor-grabbing"
           >
-            <p className="text-slate-800 leading-9 text-lg normal-case border-b pb-8 border-black/15">
+            <p className="text-slate-800 leading-7 sm:leading-normal text-lg normal-case border-b pb-8 border-black/15">
               Nulla metus metus ullamcorper vel tincidunt sed euismod nibh
               volutpat velit class aptent taciti sociosqu ad litora.
             </p>

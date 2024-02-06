@@ -8,15 +8,15 @@ import { clients } from "../../utls/constants";
 const Clients = () => {
   return (
     <section>
-      <div className="h-[1000px] sm:h-[1000px] lg:h-[700px]">
-        <div className="absolute w-full left-0 h-full lg:h-[700px]">
+      <div className="h-[900px] lg:h-[700px]">
+        <div className="absolute w-full left-0 lg:h-[700px]">
           <img
             src={img}
-            className="h-[1000px] sm:h-[1000px] lg:h-[700px] w-full object-cover object-right"
+            className="h-[900px] lg:h-[700px] w-full object-cover object-right"
           />
-          <div className="absolute h-[1000px] sm:h-[1000px] lg:h-[700px] w-full top-0 left-0 bg-black/80 z-10"></div>
+          <div className="absolute h-[900px] lg:h-[700px] w-full top-0 left-0 bg-black/80 z-10"></div>
         </div>
-        <div className="relative z-10 flex flex-col lg:flex-row gap-20 lg:gap-10 lg:translate-y-[250px] py-10 sm:py-20 lg:py-0">
+        <div className="relative z-10 flex flex-col lg:flex-row gap-10 lg:gap-10 lg:translate-y-[250px] py-10 sm:py-20 lg:py-0">
           <div className="lg:w-[45%] h-[fit-content]">
             <HoverCursor className="w-[100px] h-[100px] rounded-full bg-white/20 p-[7.5px] cursor-pointer">
               <div className="w-[85px] h-[85px] rounded-full bg-white flex justify-center items-center">
@@ -27,16 +27,16 @@ const Clients = () => {
                 />
               </div>
             </HoverCursor>
-            <h1 className="mt-10 font-extrabold text-4xl leading-[1.5]">
+            <h1 className="mt-10 font-extrabold text-2xl sm:text-4xl leading-[1.5]">
               So that's us. There's no otherway to put it.
             </h1>
           </div>
           <ClientSliders />
         </div>
       </div>
-      <div className="h-[200px]">
-        <div className="absolute h-[200px] left-0 w-full bg-lightMainColor"></div>
-        <div className="relative z-10 flex items-center gap-10 lg:gap-10 h-full mx-auto lg:mx-0 w-[fit-content]">
+      <div className="h-[350px] md:h-[250px]">
+        <div className="absolute h-[350px] md:h-[250px] left-0 w-full bg-lightMainColor"></div>
+        <div className="relative z-10 flex flex-col sm:flex-row gap-10 lg:gap-10 h-full mx-auto lg:mx-0 w-[fit-content] p-14">
           {clients.circleProgress.map(({ value, heading, text }, i) => (
             <div key={value + i} className="flex gap-4 items-center">
               <div className="relative w-[100px] h-[100px]">
@@ -51,20 +51,20 @@ const Clients = () => {
                     style={{
                       fill: "transparent",
                       stroke: "#75dab4",
-                      strokeWidth: "2",
+                      strokeWidth: "3",
                       strokeDasharray: "307",
                       strokeDashoffset: `${(-value / 100) * 307 - 307}`,
                       transition: "all 100ms linear",
                     }}
                   ></path>
                 </svg>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-md">
                   {value}%
                 </div>
               </div>
               <div>
                 <h6 className="text-sm mb-2 text-slate-300">{heading}</h6>
-                <p className="font-bold">{text}</p>
+                <p className="font-bold text-md">{text}</p>
               </div>
             </div>
           ))}

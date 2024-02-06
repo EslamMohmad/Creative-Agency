@@ -11,13 +11,13 @@ const Parent = () => {
 
   useEffect(() => {
     menuCompState
-      ? document.body.classList.add("!overflow-hidden", "h-[100vh]")
+      ? document.body.classList.add("!overflow-hidden", "h-[100dvh]")
       : !loadingCompState &&
-        document.body.classList.remove("!overflow-hidden", "h-[100vh]");
+        document.body.classList.remove("!overflow-hidden", "h-[100dvh]");
   }, [menuCompState, loadingCompState]);
 
   return (
-    <div className="relative overflow-hidden min-h-[100vh] bg-mainColor">
+    <div className="relative overflow-hidden min-h-[100svh] bg-mainColor">
       <Cursor />
       <LoadingComponent />
       <Navbar />
