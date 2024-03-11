@@ -52,7 +52,7 @@ const Footer = () => {
               <p className="pb-5 text-xs text-zinc-400">
                 sign up for subscribe out newsletter!
               </p>
-              <div className="flex">
+              <div className="flex justify-center">
                 <input
                   type="email"
                   placeholder="your email"

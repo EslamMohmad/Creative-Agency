@@ -1,13 +1,16 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation, useHref } from "react-router-dom";
 import LoadingComponent from "../loadingComponent/LoadingComponent";
 import Cursor from "../cursor/Cursor";
 import Navbar from "../home/navbar/Navbar";
 import MenuComponent from "../menu/MenuComponent";
 import { useContext, useEffect } from "react";
 import { AppContext } from "../../context/AppContext";
+import ScrollTop from "./../scrollTop/ScrollTop";
 
 const Parent = () => {
   const { menuCompState, loadingCompState } = useContext(AppContext);
+
+  const location = useHref();
 
   useEffect(() => {
     menuCompState
@@ -23,6 +26,7 @@ const Parent = () => {
       <Navbar />
       <MenuComponent />
       <Outlet />
+      {location !== "/Creative-Agency" ? <ScrollTop /> : false}
     </div>
   );
 };

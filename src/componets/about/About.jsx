@@ -5,7 +5,6 @@ import Parallex from "../../reuseable components/Parallex";
 import { useRef } from "react";
 import { menuItems } from "../../utls/constants";
 import { useLocation } from "react-router-dom";
-import ScrollTop from "../scrollTop/ScrollTop";
 import Clients from "./Clients";
 import OurTeam from "./OurTeam";
 import AboutUs from "./AboutUs";
@@ -60,7 +59,6 @@ const About = () => {
         <OurClients />
         <Footer />
       </main>
-      <ScrollTop />
     </div>
   );
 };

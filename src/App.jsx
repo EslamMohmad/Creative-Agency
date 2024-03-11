@@ -5,6 +5,8 @@ import { AppContextProvider } from "./context/AppContext";
 import Home from "./componets/home/home";
 import Parent from "./componets/parent/Parent";
 import About from "./componets/about/About";
+import Portfolio from "./componets/portfolio/Portfolio";
+import Contact from "./componets/contact/Contact";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route path="Creative-Agency" element={<Parent />}>
             <Route path="" element={<Home />} />
             <Route path="about" element={<About />} />
+            <Route path="portfolio" element={<Portfolio />} />
+            <Route path="contact" element={<Contact />} />
           </Route>
         </Routes>
       </Router>

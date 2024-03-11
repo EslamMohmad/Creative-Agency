@@ -4,7 +4,7 @@ import Menu from "./Menu";
 import { AppContext } from "../../../context/AppContext";
 
 const Navbar = () => {
-  const { loadingCompState } = useContext(AppContext);
+  const { loadingCompState, menuCompState } = useContext(AppContext);
   const [state, setState] = useState(false);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const Navbar = () => {
       className={`fixed top-0 left-0 w-full px-12 py-3 sm:py-4 flex justify-between items-center ${
         loadingCompState ? "opacity-0 invisible" : " opacity-100 visible"
       } ${
-        state
+        state && !menuCompState
           ? "bg-mainColor/60 rounded-bl-md rounded-br-md backdrop-blur-sm"
           : "bg-transparent"
       } transition-[opacity, visibility] duration-500 z-[60]`}

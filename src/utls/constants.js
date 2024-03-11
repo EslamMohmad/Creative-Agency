@@ -32,6 +32,16 @@ import post1 from "../componets/about/assets/post1.jpg";
 import post2 from "../componets/about/assets/post2.jpg";
 import post3 from "../componets/about/assets/post3.jpg";
 
+import work1 from "../componets/portfolio/assets/work 1.jpg";
+import work2 from "../componets/portfolio/assets/work 2.jpg";
+import work3 from "../componets/portfolio/assets/work 3.jpg";
+import work4 from "../componets/portfolio/assets/work 4.jpg";
+import work5 from "../componets/portfolio/assets/work 5.jpg";
+import work6 from "../componets/portfolio/assets/work 6.jpg";
+import work7 from "../componets/portfolio/assets/work 7.jpg";
+import work8 from "../componets/portfolio/assets/work 8.jpg";
+import work9 from "../componets/portfolio/assets/work 9.jpg";
+
 import {
   faBehance,
   faLinkedinIn,
@@ -51,7 +61,6 @@ export const menuItems = {
     { txt: "home", route: " " },
     { txt: "about us", route: "/about" },
     { txt: "portfolio", route: "/portfolio" },
-    { txt: "showcasses", route: "/showcasses" },
     { txt: "contact", route: "/contact" },
   ],
   aside: {
@@ -115,3 +124,9 @@ export const brands = [
 ];
 
 export const instagramPosts = [post1, post2, post3];
+
+export const portfolioWorks = [
+  [work1, work2, work3],
+  [work4, work5, work6],
+  [work7, work8, work9],
+];

@@ -34,7 +34,7 @@ const Circle = () => {
           strokeWidth: "4",
           strokeDasharray: "307",
           strokeDashoffset: `${307 - (scrollValue / 100) * 307}`,
-          transition: "all 100ms linear",
+          // transition: "all 100ms linear",
         }}
       ></path>
     </svg>
