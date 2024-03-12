@@ -2,6 +2,7 @@ import HoverCursor from "../../reuseable components/HoverCursor";
 import HoverTransitionTxt from "../../reuseable components/HoverTransitionTxt";
 import { brands } from "../../utls/constants";
 import pattern from "./assets/pattern.png";
+import HoverButton from "./../../reuseable components/HoverButton";
 const OurClients = () => {
   return (
     <section>
@@ -56,10 +57,7 @@ const OurClients = () => {
             </h1>
           </div>
           <HoverCursor className="ml-auto md:ml-0">
-            <button className="group relative z-10 border-2 border-white font-semibold text-md w-[200px] capitalize h-[fit-content] py-4 hover:text-black transition-colors overflow-hidden">
-              <div className="absolute w-[calc(100%_+_10px)] h-full -top-20 -rotate-6 group-hover:rotate-0  bg-white origin-bottom z-0 group-hover:top-0 transition-all duration-300"></div>
-              <span className="relative block z-10">get touch</span>
-            </button>
+            <HoverButton>get touch</HoverButton>
           </HoverCursor>
         </div>
       </div>

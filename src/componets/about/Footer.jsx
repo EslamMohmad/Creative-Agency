@@ -84,7 +84,13 @@ const Footer = () => {
       </div>
       <div className="p-12 py-8 lg:absolute z-20 text-center text-sm text-zinc-400 bottom-0 lg:left-1/2 lg:-translate-x-1/2 bg-mainColor mx-auto lg:w-1/2">
         © 2020, Avo Template. Made with passion by{" "}
-        <span className="text-lightGreenColor">UI-ThemeZ.</span>
+        <a
+          className="text-lightGreenColor capitalize"
+          href="https://github.com/EslamMohmad"
+          target="_blank"
+        >
+          eslam.
+        </a>
       </div>
     </footer>
   );

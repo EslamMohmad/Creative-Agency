@@ -1,25 +1,14 @@
-import { useRef } from "react";
-import ScrollTextFade from "../../reuseable components/ScrollTextFade";
-import ScrollTextMove from "../../reuseable components/ScrollTextMove";
 import { portfolioWorks } from "../../utls/constants";
 import HoverCursor from "../../reuseable components/HoverCursor";
 import StaticComponent from "../../reuseable components/StaticComponent";
 
 const Portfolio = () => {
-  const text =
-    "Creativity involves breaking out of expected & repeatable patterns in order to look at things in different way than ever before.";
-
-  const elementRef = useRef();
-
   const FrontHeaderText = () => {
     return (
-      <div className="w-[80%] lg:w-[50%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <h1 className="text-center leading-8 md:leading-10 text-base md:text-[3vw] lg:text-2xl tracking-wider">
-          <ScrollTextMove element={elementRef}>
-            <ScrollTextFade element={elementRef}>{text}</ScrollTextFade>
-          </ScrollTextMove>
-        </h1>
-      </div>
+      <h1 className="text-center leading-8 md:leading-10 text-base md:text-[3vw] lg:text-2xl tracking-wider">
+        "Creativity involves breaking out of expected & repeatable patterns in
+        order to look at things in different way than ever before."
+      </h1>
     );
   };
 
@@ -46,7 +35,6 @@ const Portfolio = () => {
 
   return (
     <StaticComponent
-      ref={elementRef}
       backheaderComp={"works"}
       frontheaderComp={<FrontHeaderText />}
       compContent={<PortfolioContent />}
